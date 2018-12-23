@@ -5,7 +5,8 @@ Reversible Data Hiding in Encrypted Image
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-COMPRESSIONE DATI:
+
+sCOMPRESSIONE DATI:
 cartella drive: https://drive.google.com/open?id=1l4iiNyu0L172sq7spIZZrQ-4a38Hy63G
 
 Task: https://trello.com/b/BgOCUsbG/progetto-compressione-dati
