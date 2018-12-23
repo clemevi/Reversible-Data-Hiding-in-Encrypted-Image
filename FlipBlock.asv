@@ -1,0 +1,9 @@
+function [outputArg1,outputArg2] = FlipBlock(inputArg1,inputArg2)
+%FLIPBLOCK
+% Data una matrice di interi B, una chiave Kh e un bit b, inizializzare
+% lo streamcipher con la chiave Kh, flippare gli ultimi 3 bit 
+% dell'iesimo
+outputArg1 = inputArg1;
+outputArg2 = inputArg2;
+end
+
