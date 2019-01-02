@@ -1,4 +1,4 @@
-Img = imread('C:\Users\laura\Desktop\Magistrale\CD\lena512.bmp');
+Img = imread('lena512.bmp');
 if size(Img,3)==3
     Img = rgb2gray(Img)
 end
