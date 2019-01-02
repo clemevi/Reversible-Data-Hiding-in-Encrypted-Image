@@ -1,8 +1,20 @@
-function [outputArg1,outputArg2] = ImageDecryption(inputArg1,inputArg2)
+function M_dec = ImageDecryption(M, K)
+%CLEMENTE
 %IMAGEDECRYPTION:
 % data ua matrice di interi M e una chiave K, restituire la decifratura di
 % M utilizzando lo streamcipher usato per la cifratura.
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
-end
 
+%get Image size
+row, col = size(M);
+n = row*col;
+
+%get pseudorandom bit string by streamcipher (trivium)
+pseudorandom_bit = trivium(n,K);
+
+%convert vector obateined by trivium to matrix
+mat_bit = vec2mat(pseudorandom_bit, col);
+
+%do bit-wise xor beteween Image and trivium output
+M_dec = bitxor(M , mat_bit);
+
+end
