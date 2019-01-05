@@ -1,7 +1,10 @@
 %INPUT: l'originale e la decifrata (stesse dimensioni)
 %OUTPUT: valore dell'energia media dell'errore.
-%l'errore medio è calcolato solo sugli utlimi 3 bit di ogni pixel, in decimale (o anche sul valore intero del pixel)
+%Error_rate: l'errore medio è calcolato solo sugli utlimi 3 bit di ogni pixel, in decimale (o anche sul valore intero del pixel)
 %è la sommatoria della differenza al quadrato degli ultimi 3 bit di ogni pixel, diviso il numero di pixel
+%Error_vector: vettore contenente le coordinate dei pixel non corretti
+%Error_mat: immagine a sfondo nero con evidenziati i pixel non corretti
+%Error_img: immagine originale con evidenziati i pixel non corretti
 
 function [Error_rate, Error_vector, Error_mat, Error_img] = ErrorRate(Mat1, Mat2)
     %Mat1 = imread('test_images\dritta.jpeg');
