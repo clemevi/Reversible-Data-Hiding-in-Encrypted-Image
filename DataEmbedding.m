@@ -1,4 +1,4 @@
-function  flippedMatrix = Data_Embedded(data,M,Kh)
+function  flippedMatrix = Data_Embedding(data,M,Kh)
 
 %%Data una stringa di bit "data" , una matrice di interi M e una chiave Kh
 %%Richiamare SplitImage e per ogni blocco:
