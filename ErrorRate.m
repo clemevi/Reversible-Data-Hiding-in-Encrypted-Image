@@ -43,6 +43,10 @@ function [Error_rate, Error_vector, Error_mat, Error_img] = ErrorRate(Mat1, Mat2
     imshow(Error_img);
     %Error_vector
     
-    Error_rate= x/(M*N)
+    Error_rate= 0 ;
+    for i=1:x
+        Error_rate = (Error_rate + (Mat1(Error_vector(i,1), Error_vector(i,2)) - Mat2(Error_vector(i,1), Error_vector(i,2)))^2);
+    end
+    Error_rate = Error_rate/(M*N);
     
 end
