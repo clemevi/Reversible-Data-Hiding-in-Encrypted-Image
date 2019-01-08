@@ -6,14 +6,10 @@ function M_dec = ImageDecryption(M, K)
 
 %get Image size
 [row, col] = size(M);
-n = row*col*8;
+n = row*col;
 
 %get pseudorandom bit string by streamcipher (trivium)
-pseudorandom_bit = trivium(n,K);
-%separeted bit to group of 8 bit (int)
-pad = vec2mat(pseudorandom_bit, 8);
-%convert bit to int
-pad_int = (bin2dec(int2str(pad)))';
+pad_int = PRGA(K, n)%trivium(n,K);
 
 %convert vector obateined by trivium to matrix
 mat_bit = vec2mat(pad_int, col);
