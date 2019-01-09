@@ -1,6 +1,6 @@
 function [ key ] = PRGA( k, n )
 
-S = KSA(k)
+S = KSA(k);
 
 i = 0;
 j = 0;
