@@ -9,7 +9,7 @@ function M_dec = ImageDecryption(M, K)
 n = row*col;
 
 %get pseudorandom bit string by streamcipher (trivium)
-pad_int = PRGA(K, n)%trivium(n,K);
+pad_int = PRGA(K, n);%trivium(n,K);
 
 %convert vector obateined by trivium to matrix
 mat_bit = vec2mat(pad_int, col);
