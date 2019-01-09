@@ -9,25 +9,34 @@ function [Bdec,bitData] = dataExtraction(M,Kh,s)
 numBlock = (row*cols) / (s*s);
 blockRow = cols / s;
 blockCols = row / s;
-bitData = zeros(numBlock);
+bitData = zeros(1,numBlock);
 Bdec = zeros(row,cols);
-
+h=1;
 for i = 0:blockRow-1
     for j = 0:blockCols-1
-        
+        %tic;
         block = getBlock(M,s,i,j);
+        %time1 = toc
+        %tic;
         H1 = FlipBlock(block,Kh,0);
+        %time2 = toc
         H2 = FlipBlock(block,Kh,1);
+        %tic;
         fluctH1 = calculateFluctuation(H1);
+        %time3 = toc
         fluctH2 = calculateFluctuation(H2);
-    
+       
         if fluctH1 < fluctH2
-            bitData(i+j+1) = 0;
+            bitData(h) = 0;
+            %tic;
             Bdec = setBlock(Bdec,H1,i,j);
+            %time4 = toc
         else
-            bitData(i+j+1) = 1;
+            bitData(h) = 1;
             Bdec = setBlock(Bdec,H2,i,j);
         end
+        
+        h = h + 1;
     end          
 end
  
