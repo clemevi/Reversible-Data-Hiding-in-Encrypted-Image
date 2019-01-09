@@ -3,8 +3,10 @@ function peaksnr = PSNR(Img,ref)
 %   Detailed explanation goes here
 % PSNR = 10*LOG10((255^2)/(Err_ass/2))=37.9dB
 
-
-peaksnr = psnr(Img,ref);
+[E, Error_rate, Error_vector, Error_mat, Error_img] = Error_Rate(Img,ref);
+Error_rate
+peaksnr = 10 * log10((255*255)/(E));
+%psnr(Img,ref);
 
 end
 
