@@ -24,16 +24,11 @@ for i=0:block_rows-1
     block = getBlock(M,s,i,j);
     flipped_block=FlipBlock(block, Kh, data(z));
     z = z+1;
-    if z == bit_num
+    
+    flippedMatrix=setBlock(flippedMatrix, flipped_block, i,j);
+    if z == bit_num+1
         break;
     end
-%     if data(i+1)==0
-%         flipped_block= zeros(s, s);
-%     else
-%         flipped_block= ones(s, s);
-%         flipped_block= flipped_block.*255;
-%     end
-    flippedMatrix=setBlock(flippedMatrix, flipped_block, i,j);
     end
 end
 
