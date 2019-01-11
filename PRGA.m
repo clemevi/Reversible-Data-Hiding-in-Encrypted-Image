@@ -18,7 +18,7 @@ while n> 0
     
 end
 
-key = uint8(key)
+key = uint8(key);
 
 end
 
