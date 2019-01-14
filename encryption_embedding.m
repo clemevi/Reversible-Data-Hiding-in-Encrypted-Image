@@ -1,6 +1,10 @@
 M = read_img(test_image);
 
 range = getRange(M);
+if(isempty(range))
+    fprintf("ERROR: IMAGE BAD FORMAT. GET RANGE RETURN EMPTY VECTOR");
+    return;
+end
 data_to_hide = format_data_to_hide(data_to_hide(1:(range(1)/8)));
 size_data = size(data_to_hide, 2);
 

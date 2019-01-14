@@ -12,8 +12,8 @@ numBlock = bit_num;   % (row*cols) / (s*s);
 blockCols = cols / s;
 blockRow = row / s;
 
-bitData = zeros(1,numBlock);
-Bdec = zeros(row,cols);
+bitData = zeros(1,numBlock,'uint8');
+Bdec = zeros(row,cols,'uint8');
 h=1;
 
 pad = getMaskPad(s,Kh);
@@ -29,7 +29,7 @@ for i = 0:blockRow-1
        
         fluctH1 = calculateFluctuation(H1);
         fluctH2 = calculateFluctuation(H2);
-       
+     
         if fluctH1 < fluctH2
             bitData(h) = 0;         
             Bdec(i*s+1 : i*s+s, j*s+1 : j*s+s) = H1;%Bdec = setBlock(Bdec,H1,i,j);
