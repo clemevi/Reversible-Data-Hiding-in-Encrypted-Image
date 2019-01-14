@@ -1,4 +1,9 @@
 function Mout = setBlock(M, block, i, j)
+%Input: Two-dimensional matrix, Integer, Integer, Integer
+%Output: Two-dimensional matrix
+%it calculates the Block size and checks if the matrix M is divisible in blocks, in this case it
+%replaces the block of the matrix M with indices i and j with Block and returns the matrix M
+
 h = size(M, 1);
 w = size(M, 2);
 linear_size = h*w;
