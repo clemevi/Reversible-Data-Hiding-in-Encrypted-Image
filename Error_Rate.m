@@ -1,7 +1,8 @@
-%INPUT: l'originale e la decifrata (stesse dimensioni)
-%OUTPUT: valore dell'energia media dell'errore.
-%Error_rate: l'errore medio Ã¨ calcolato solo sugli utlimi 3 bit di ogni pixel, in decimale (o anche sul valore intero del pixel)
-%Ã¨ la sommatoria della differenza al quadrato degli ultimi 3 bit di ogni pixel, diviso il numero di pixel
+%Input: Two-dimensional matrix, Two-dimensional matrix
+%Output: Integer
+%Given the original and the deciphered image, calculate the average energy value of the error.
+%the sum of the square differences of the last 3 bits of each pixel of the original image and
+%of the deciphered image, divided by the number of pixels
 
 function E = Error_Rate(Mat1, Mat2)  
     
