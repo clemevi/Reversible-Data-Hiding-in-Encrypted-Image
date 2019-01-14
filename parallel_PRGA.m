@@ -5,7 +5,10 @@ function pad = parallel_PRGA(K,n, p)
 %   - mod(n,p) = 0  (p must divide p)
 %   - 'parallel computing toolbox' must be installed
 
-
+if(mod(n,p)~= 0)
+    fprintf("ERRORE N DEVE ESSERE DIVISIBILE PER P");
+    return;
+end
 %generate p key of lenght N (one for core)
 
     l = size(K,2);

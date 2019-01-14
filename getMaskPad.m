@@ -4,7 +4,7 @@ function pad = getMaskPad(s,Kh)
 %%PRGA per ottenere il pad
 
 %get lenght of pad
-l = ((s*s)/8)+1;
+l = uint64(((s*s)/8)+1);
 %get the remaining bits to add
 r = mod(s*s,8);
 %get pad

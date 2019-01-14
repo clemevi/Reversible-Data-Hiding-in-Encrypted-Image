@@ -14,5 +14,9 @@ div = uint64(div(mask)) ;
 
 range = (m*n)./(div.^2);
 
+mask = mod(range,8)==0;
+
+range = range(mask);
+
 end
 

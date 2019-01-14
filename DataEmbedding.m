@@ -7,7 +7,9 @@ function  flippedMatrix = Data_Embedding(data,M,Kh)
 bit_num = size(data, 2);
 
 if mod(rows*cols,bit_num)~= 0
+    fprintf("#######################################################################################\n");
     fprintf(">>>>>>>>>>Dimension of image M is not divisible by lenght of data.<<<<<<<<<<\n");
+    fprintf("#######################################################################################\n");
    return;
 end
 
