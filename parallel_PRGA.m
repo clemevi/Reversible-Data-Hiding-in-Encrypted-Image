@@ -13,7 +13,7 @@ function pad = parallel_PRGA(K,n, p)
     keys = reshape(keys,p,l);
 
 
-pads = zeros(p,n/p);
+pads = zeros(p,n/p,'uint8');
 
 %parallel loop
 parfor i = 1:p

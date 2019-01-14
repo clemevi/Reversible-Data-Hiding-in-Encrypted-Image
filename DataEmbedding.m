@@ -1,7 +1,6 @@
 function  flippedMatrix = Data_Embedding(data,M,Kh)
-
 %%Data una stringa di bit "data" , una matrice di interi M e una chiave Kh
-%%Richiamare SplitImage e per ogni blocco:
+%%Richiamare getblock e per ogni blocco:
 %%Richiamare Flipblock dandogli in input l'iesimo bit della stringa "data"
 %%Restituire la matrice M con i bit flippati
 [rows, cols] = size(M);
@@ -17,21 +16,22 @@ block_rows=rows/s;
 block_cols=cols/s;
 
 flippedMatrix = M;
-%flippedMatrix = zeros(rows, cols);
 z = 1;
+
+pad = getMaskPad(s,Kh);
+
 for i=0:block_rows-1
     for j=0:block_cols-1 
     block = getBlock(M,s,i,j);
-    flipped_block=FlipBlock(block, Kh, data(z));
+    flipped_block=FlipBlock(block, pad, data(z));
     z = z+1;
-    
-    flippedMatrix=setBlock(flippedMatrix, flipped_block, i,j);
+   
+    flippedMatrix = setBlock(flippedMatrix, flipped_block, i,j);
     if z == bit_num+1
         break;
     end
     end
 end
-
 
 
 end

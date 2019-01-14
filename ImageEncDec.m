@@ -1,4 +1,4 @@
-function M_dec = ImageDecryption(M, K)
+function M_dec = ImageEncDec(M, K)
 %IMAGEDECRYPTION:
 % Given a matrix of integers M and a K key, 
 % return the decryption of M using the 
