@@ -3,7 +3,7 @@ function  flippedMatrix = Data_Embedding(data,M,Kh)
 %Output: Two-dimensional matrix
 %Given the bits to hide, an image and a key
 %computes the size of an sxs block based on the image dimensions and the data to be inserted,
-%computes a pad matrix of the same size as a block containing pseudo-random bit (getMaskPad function),
+%computes a pad matrix of the same size as a block containing pseudo-random bit (getMaskPad),
 %for each image block z (getBlock) flips the block (FlipBlock) according to the pad and the z-th bit to insert
 %rebuilds the image with the flipped blocks (setBlock)
 [rows, cols] = size(M);
