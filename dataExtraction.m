@@ -11,7 +11,7 @@ function [Bdec,bitData] = dataExtraction(M,Kh,bit_num)
 [row,cols] = size(M);
 
 s = sqrt(row*cols/bit_num);
-numBlock = bit_num;   % (row*cols) / (s*s);
+numBlock = bit_num; 
 blockCols = cols / s;
 blockRow = row / s;
 
