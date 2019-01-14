@@ -1,9 +1,12 @@
 function Bflip = FlipBlock(B,pad,b)
-%FLIPBLOCK
-% Data una matrice di interi B, una chiave Kh e un bit b, inizializzare
-% lo streamcipher con la chiave Kh, flippare gli ultimi 3 bit 
-% dell'iesimo elemento di B se l'i-esimo elemento dato dallo streamcipher
-% ÃƒÂ¨ uguale a b. Restituire la matrice con i bit flippati.
+%Input: Two-dimensional matrix, Two-dimensional matrix, Integer
+%Output: Two-dimensional matrix
+
+%Given a matrix of integers B, which corresponds to a block, a pad matrix containing pseudo-random numbers
+%and a bit b, if b is equal to zero, the pad is denied, multiply the pad (or pad denied) by 7 (which in
+%the bitwise XOR will be 00000111 so that only the last 3 bits will be flipped) in order to have 7 where 
+%there was 1 (pixel of the set S1) and 0 there where there was 0 (pixel of the S0 set) perform a bitwise
+%XOR between the block and the modified pad
 
 
 if(b==0)
