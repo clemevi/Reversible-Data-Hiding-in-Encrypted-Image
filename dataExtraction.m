@@ -4,7 +4,7 @@ function [Bdec,bitData] = dataExtraction(M,Kh,bit_num)
 %Given an image M a Kh key and the number of hidden bits, it calculates the number and size of blocks
 %in which to divide the image based on the number of hidden bits, and for each block (getBlock):
 %Recall FlipBlock twice (With b = 0 and b = 1) to obtain H1 and H2.
-%Calculates the fluctuation () of H1 and H2, compares them and chooses the minor.
+%Calculates the fluctuation (calculateFluctuation) of H1 and H2, compares them and chooses the minor.
 %Reconstruct the original image with the matrices and bits chosen in the previous step
 
 
