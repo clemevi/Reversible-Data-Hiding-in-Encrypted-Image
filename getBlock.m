@@ -1,6 +1,7 @@
 function [B] = getBlock(M, s, i, j)
-%getBlock return the k block of M matrix bidimensional image, s is the dimension of blocks.
-%M dimensions must be divisible by s
+%Input: Two-dimensional matrix, Integer, Integer, Integer
+%Output: sxs matrix
+%it checks whether the matrix M is divisible into sxs blocks and returns the block with indexes i and j
 
 h = size(M, 1);
 w = size(M, 2);
