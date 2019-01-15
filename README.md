@@ -10,4 +10,6 @@ COMPRESSIONE DATI:
 
 Gitlab url: https://gitlab.com/Clementevigliotti92/reversible-data-hiding-in-encrypted-image
 
-ESEGUIRE test.m per la prova
+PER LA PROVA:
+1. INSTALLARE 'parallel computing toolbox'
+2. ESEGUIRE test.m
