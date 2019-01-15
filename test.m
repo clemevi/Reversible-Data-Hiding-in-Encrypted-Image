@@ -1,12 +1,13 @@
 clear all; close all;
 
-encryption_password = 'clement92';
-hiding_password = '1234gneigni';
+encryption_password = 'Esame compressione dei dati';
+hiding_password = 'Ximpeng Zhang';
 
+%per cambiare immagine decommentare 
 %##########################     TEST     ##################################
 % TEST LENA512 (hide 32 char -> 256 bit)
-% test_image = 'TEST/lena512.bmp';
-% test_image_HIDE = 'TEST/lena512_hide.bmp';
+ test_image = 'TEST/lena512.bmp';
+ test_image_HIDE = 'TEST/lena512_hide.bmp';
 
 
 % TEST BABOON900 (hide 50 char -> 400 bit)
@@ -35,13 +36,14 @@ data_to_hide = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in 
 
 
 
-
+%vedere script encryption_embedding
 tic
 encryption_embedding;
 time_to_enc_emb = toc
 
 clear M; clear M_enc; clear M_hide;
 
+%vedere script decription_extraction
 tic
 decription_extraction;
 time_to_dec_extr = toc
