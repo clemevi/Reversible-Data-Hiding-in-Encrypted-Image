@@ -24,8 +24,8 @@ b. flip of the block based on the bit to be inserted and based on the pseudo-ran
 
 Sender flow:
 
-![](sender.png)
+![](sender.JPG)
 
 Receiver flow:
 
-![](receiver.png)
+![](recevier.JPG)
