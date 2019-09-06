@@ -4,6 +4,8 @@ A simple Matlab implementation of the algorithm presented in the paper: "Reversi
 
 link: http://pgembeddedsystems.com/download/matlab/Reversible%20Data%20Hiding%20in%20Encrypted%20Image.pdf
 
+[An in-depth description (in Italian) is present in the pdf included in the repository.]
+
 In this implementation two Stream Ciphers were used:
 -Trivium
 -RC4
